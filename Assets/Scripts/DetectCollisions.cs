@@ -5,9 +5,21 @@ using UnityEngine;
 public class DetectCollisions : MonoBehaviour
 {
 
+    public Player player;
+
+    private void Start()
+    {
+        player = FindAnyObjectByType<Player>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (other.gameObject.name != "Player")
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            player.Hitted();
+        }
     }
+
 }
