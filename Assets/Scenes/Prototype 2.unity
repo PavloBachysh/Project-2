@@ -729,8 +729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32edfc48494083548b5c312dc07089e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 2953594567078496400, guid: f4ecdd8ef00bc0e4eb9bfd60d5f10458,
-    type: 3}
 --- !u!65 &1000843992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -793,6 +791,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   score: 0
+--- !u!114 &1000843995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000843986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e82862ddd6d884fb1fe6b3a9e31d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountToPool: 20
+  pooledObject: {fileID: 2953594567078496400, guid: f4ecdd8ef00bc0e4eb9bfd60d5f10458,
+    type: 3}
 --- !u!1001 &1441076459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -865,6 +878,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1000843994}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 6f52b946693e54048af74f5cd6ba49f8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1000843995}
   m_SourcePrefab: {fileID: 100100000, guid: 6f52b946693e54048af74f5cd6ba49f8, type: 3}
 --- !u!1 &1590138454
 GameObject:

@@ -25,7 +25,14 @@ public class DestroyOutOfBounds : MonoBehaviour
     {
         if (transform.position.z > topBounds)
         {
-            Destroy(gameObject);
+            if (gameObject.CompareTag("Cookie"))
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
         else if (transform.position.z < lowerBounds)
         {
@@ -38,7 +45,14 @@ public class DestroyOutOfBounds : MonoBehaviour
     {
         if (transform.position.x > verticalBounds)
         {
-            Destroy(gameObject);
+            if (gameObject.CompareTag("Cookie"))
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
         else if (transform.position.x < -verticalBounds)
         {

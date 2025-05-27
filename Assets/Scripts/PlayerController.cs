@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class PlayerController : MonoBehaviour
     private float speed = 15.0f;
     private float xRange = 11.0f;
     private float zRange = 15f;
+    private ObjectPooling objectPool;
 
-    public GameObject projectilePrefab;
+    private GameObject projectilePrefab;
 
-    void Start()
+    void Awake()
     {
-        
+        objectPool = GetComponent<ObjectPooling>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            //Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            projectilePrefab = objectPool.GetPooledObject();
+            if (projectilePrefab != null)
+            {
+                projectilePrefab.transform.position = gameObject.transform.position;
+                projectilePrefab.transform.rotation = gameObject.transform.rotation;
+                projectilePrefab.SetActive(true);
+            }
         }
 
     }

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8141061828136085537}
   m_Layer: 0
   m_Name: Food_Cookie_01
-  m_TagString: Untagged
+  m_TagString: Cookie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b60aaf5ba4092d4eb4fb9b702f58cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!65 &6757355825023743162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -173,3 +174,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6570eb09c05b8e4ebc8b6f1fc7d62fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}

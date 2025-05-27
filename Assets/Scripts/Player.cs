@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
         else
         {
             Debug.Log("Game Over");
+            Time.timeScale = 0;
         }
     }
 
